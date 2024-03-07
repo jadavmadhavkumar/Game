@@ -1,37 +1,38 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 300px;
+    margin-top: 20px;
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 40px;
+    font-weight: 700;
+    margin-top: 20px ;
+    justify-self: flex-start;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #f1f1f1;
+    background-image: linear-gradient(to right, #85c1e9, #a5bced, #c5b7e8, #dfb3da, #efb2c8, #f9b3bc, #ffb6af, #ffbba2, #ffc095, #ffc887, #ffd17a, #f7dc6f);    
 }
 
-.container {
-    height: 50vh;
-}
 
-.game {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 300px;
-    margin: 0 auto;
-}
 
-.box {
+.cell {
     height: 100px;
     background: #fff;
     display: flex;
@@ -40,17 +41,21 @@ body {
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.box:hover {
-    background: #ddd;
+    font-size: 2rem;
 }
 
 body {
-    background: #3498db;
+    background-color: rg;
+}
+button {
+    margin-top: 20px;
 }
 
-#reset-btn {
+.cell:hover {
+    background: #f1f1f1;
+}
+
+button {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
@@ -77,28 +82,23 @@ body {
     }
 }
 
-#reset-btn:hover {
-    background-color: #1C0708;
+button:hover {
+    background-color: #E23F44;
     color: #fff;
+    cursor: pointer;
 }
 
-
-.mes-conatainer {
-    display: flex;
-
-    padding: 10px auto;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    margin : 0 auto;
-    margin-left: auto;
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
-#new-btn {
+
+.btn{
+    margin-top: 20px;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
-    background-color: green;
+    background-color: #E23F44;
     font-size: 2rem;
     display: block;
     margin-top: 20px;
@@ -106,18 +106,5 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-   
-}
-
-#message {
-    font-size: 2rem;
-    color: #ddd;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: bolder;
-}
-
-.hide{
-    display: none;
+    animation: text-animation 1s ease-in-out infinite alternate;
 }
